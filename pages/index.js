@@ -5,9 +5,9 @@ import styles from '../styles/Home.module.css'
 
 
 export async function getServerSideProps() {
-  const res = await fetch(
-    "https://imdb-api.com/en/API/Top250Movies/k_8bd32cql"
-  );
+  const res = await fetch(`
+    https://imdb-api.com/en/API/Top250Movies/${process.env.IMDB_API_KEY}
+  `);
   const data = await res.json();
 
   return {
@@ -18,7 +18,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({movies}) {
-  console.log({movies})
 
   const [filter, setFilter] = useState('')
 
