@@ -5,9 +5,9 @@ import styles from '../styles/Home.module.css'
 
 
 export async function getServerSideProps() {
-  const res = await fetch(`
-    https://imdb-api.com/en/API/Top250Movies/${process.env.IMDB_API_KEY}
-  `);
+  const res = await fetch(
+    'https://imdb-api.com/en/API/Top250Movies/k_j3yhrdmw'
+  );
   const data = await res.json();
 
   return {
