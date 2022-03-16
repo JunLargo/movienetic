@@ -51,22 +51,20 @@ export default function Home({movies}) {
         />
       </div>
 
-      
-
       {filteredMovies?.length > 0 ? (
          <div className="container">
-         {filteredMovies.slice(0, 20).map((movie) => (
+         {filteredMovies.slice(0, 21).map((movie) => (
            <div key={movie.id} className='movie'>
             <div>
               <p>{movie.year}</p>
             </div>
             <div>
              
-              <Image src={movie.image !== "N/A" ? movie.image : "https://via.placeholder.com/400"} alt={movie.title} height={500} width={400}/>
+              <Image src={movie.image !== "N/A" ? movie.image : "https://via.placeholder.com/400"} alt={movie.title} height={400} width={320}/>
             </div>
             <div>
               <span>{movie.imDbRating}</span>
-              <h2>{movie.fullTitle}</h2>
+              <h3>{movie.fullTitle}</h3>
             </div>
            </div>
          ))}
@@ -76,6 +74,10 @@ export default function Home({movies}) {
           <h2>No movies found! Try searching again</h2>
         </div>
       )}
+
+      <div className="footer">
+        <p>Website by: jlargo</p>
+      </div>
      
     </div>
   )
