@@ -60,7 +60,7 @@ export default function Home({movies}) {
             </div>
             <div>
              
-              <Image src={movie.image !== "N/A" ? movie.image : "https://via.placeholder.com/400"} alt={movie.title} height={400} width={320}/>
+              <Image src={movie.image} alt={movie.title} height={400} width={320}/>
             </div>
             <div>
               <span>{movie.imDbRating}</span>
