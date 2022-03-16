@@ -55,7 +55,7 @@ export default function Home({movies}) {
          <div className={styles.container}>
          {filteredMovies.slice(0, 20).map((movie) => (
            <div key={movie.id} className={styles.image}>
-             <Image src={movie.image} height={400} width={400} />
+             <Image src={movie.image} height={400} width={400} alt={movie.title} />
              
              <h2>{movie.fullTitle}</h2>
              <p>{movie.year}</p>
