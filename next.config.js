@@ -4,9 +4,9 @@ const nextConfig = {
 }
 
 module.exports = {
-  env: {
-    imdbkey: process.env.IMDBKEY
-  },
+  // env: {
+  //   imdbkey: process.env.IMDBKEY
+  // },
   images: {
     domains: ['m.media-amazon.com']
   }
