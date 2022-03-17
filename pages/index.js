@@ -1,6 +1,7 @@
 import {useState, useMemo} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 
@@ -58,10 +59,12 @@ export default function Home({movies}) {
             <div>
               <p>{movie.year}</p>
             </div>
-            <div>
-             
+            <Link href={`/movie/${movie.id}`}>
+              <a>
               <Image src={movie.image} alt={movie.title} height={400} width={320}/>
-            </div>
+              </a>
+              
+            </Link>
             <div>
               <span>{movie.imDbRating}</span>
               <h3>{movie.fullTitle}</h3>
