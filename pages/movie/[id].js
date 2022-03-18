@@ -31,7 +31,7 @@ export const getStaticProps = async (context) => {
 
 
 const Details = ({movie}) => {
-  console.log({movie})
+  //console.log({movie})
   return (
     <div className="container">
       <div className="movie-single">
